@@ -1,0 +1,116 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Container */
+.navbar {
+  width: 100%;
+  background-color: #73cad4;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Content */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar Title */
+.navbar-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Individual Navigation Items */
+.nav-item {
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #ffeb3b;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: flex; /* Show dropdown when toggled */
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: #6200ea;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .navbar-title {
+    font-size: 20px;
+  }
+
+  .nav-item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-title {
+    font-size: 18px;
+  } 
+
+  .navbar-links {
+    gap: 15px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+}
